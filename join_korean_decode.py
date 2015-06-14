@@ -5,7 +5,7 @@ import sys
 import hangul
 
 def decode_jamo(char):
-    encode_start_value = 0x7f
+    encode_start_value = 0x80
     jaeum_total_size = 30
     moeum_total_size = 21
 

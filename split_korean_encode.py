@@ -5,7 +5,7 @@ import sys
 import hangul
 
 def encode_jamo(jamo):
-    encode_start_value = 0x7f
+    encode_start_value = 0x80
     jaeum_total_size = 30
     moeum_total_size = 21
 
@@ -18,7 +18,7 @@ def encode_jamo(jamo):
     return jamo.encode("utf-8")
 
 def get_next_char(infile):
-    char_upperbound = 178
+    char_upperbound = 179
     
     for rawline in infile:
         for rawchar in rawline.decode("utf-8", "ignore"):
