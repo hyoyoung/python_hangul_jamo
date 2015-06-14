@@ -33,6 +33,11 @@ def get_next_char(infile):
                 yield other_char
 
 def main():
+    if len(sys.argv) < 2:
+        for char in get_next_char(sys.stdin):
+            sys.stdout.write(char)
+        return
+
     input_filename = sys.argv[1]
     output_filename = input_filename + ".sk"
     infile = open(input_filename)
